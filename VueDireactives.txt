@@ -1,0 +1,34 @@
+9. Vue Directives:
+Vue Directives - v-bind, v-model, v-for, v-if, v-show:
+
+<template>
+  <div>
+    <!-- v-bind -->
+    <img :src="imageSrc" alt="Vue Logo" />
+
+    <!-- v-model -->
+    <input v-model="inputValue" />
+
+    <!-- v-for -->
+    <ul>
+      <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+    </ul>
+
+    <!-- v-if, v-show -->
+    <div v-if="isVisible">This is visible with v-if</div>
+    <div v-show="isVisible">This is visible with v-show</div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const imageSrc = 'path/to/vue-logo.png';
+const inputValue = ref('');
+const items = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+];
+const isVisible = ref(true);
+</script>

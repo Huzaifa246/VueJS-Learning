@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <p>{{ message }}</p>
+    <button @click="updateMessage">Update Message</button>
+  </div>
+</template>
+
+<script setup>
+import { ref, nextTick, reactive } from 'vue';
+
+const message = ref('Initial Message');
+
+const updateMessage = async () => {
+  message.value = 'Updated Message';
+  await nextTick();
+  console.log('DOM has been updated');
+};
+</script>

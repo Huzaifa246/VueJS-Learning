@@ -1,0 +1,18 @@
+6. Watchers:
+
+
+<template>
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</template>
+
+<script setup>
+import { ref, watch } from 'vue';
+
+const message = ref('Initial Message');
+
+watch(message, (newVal, oldVal) => {
+  console.log(`Message changed from "${oldVal}" to "${newVal}"`);
+});
+</script>

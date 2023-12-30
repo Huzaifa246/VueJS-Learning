@@ -1,0 +1,29 @@
+4. Reactivity (Reactive and Ref):
+
+<template>
+  <div>
+    <p>{{ reactiveData.message }}</p>
+  </div>
+</template>
+
+<script setup>
+import { reactive } from 'vue';
+
+const reactiveData = reactive({
+  message: 'Hello, Vue!',
+});
+</script>
+
+// Ref example
+<template>
+  <div>
+    <input v-model="inputValue" />
+    <p>{{ inputValue }}</p>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const inputValue = ref('');
+</script>

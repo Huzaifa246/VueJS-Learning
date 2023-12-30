@@ -1,0 +1,81 @@
+ defineEmits is a function = Composition API to declare custom events it emits. 
+It's part of @vue/runtime-core package. Used in setup function of a component to define custom events 
+const emit = defineEmits(['customEvent1', 'customEvent2']);
+
+Event Handling:
+Define and Emit Custom Events:
+
+defineEmits:
+Used in the Composition API to declare custom events that a component can emit.
+
+emit:
+Used to trigger custom events declared with defineEmits.
+
+
+-------------------------------------------------
+4. Reactivity (Reactive and Ref):
+Reactive Data and Refs:
+reactive:
+
+Creates a reactive object.
+ref:
+
+Creates a ref object.
+5. Computed Properties:
+Computed Properties:
+computed:
+Creates a computed property.
+6. Watchers:
+Watches a specific property or expression for changes.
+
+7. Routing (Vue Router):
+Vue Router Methods:
+router-link:
+
+Creates a clickable link.
+router-view:
+
+Renders the component matched by the route.
+
+8. Vuex (State Management):
+Vuex Methods:
+mapState:
+Maps state properties to local computed properties.
+
+mapGetters:
+Maps getters to local computed properties.
+
+mapActions:
+Maps actions to local methods.
+
+mapMutations:
+Maps mutations to local methods.
+
+9. Vue Directives:
+Common Vue Directives:
+v-bind:
+Binds an attribute to an expression.
+
+v-model:
+Creates two-way data binding on an input element.
+
+v-for:
+Renders a block of code for each item in an array.
+
+v-if, v-else-if, v-else:
+Conditional rendering.
+
+v-show:
+Conditional visibility.
+
+
+10. Utility Functions:
+
+nextTick:
+Queues a function to be called after the next DOM update cycle.
+
+Vue.set:
+Adds a property to a reactive object.
+
+Vue.delete:
+Deletes a property from a reactive object.

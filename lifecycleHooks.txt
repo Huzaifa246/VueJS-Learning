@@ -1,0 +1,36 @@
+Options API (lifecycle hooks):
+beforeCreate: 
+Called synchronously immediately after instance = initialized.
+created: 
+Called synchronously after the instance = created.
+beforeMount: 
+Called right before mounting begins And when render function is about to be called for the (first time).
+mounted: 
+Called after the instance = mounted, where template is converted to a render function and rendered to the DOM.
+beforeUpdate: 
+Called (when data changes), before (virtual DOM is re-rendered and patched).
+updated:
+Called (after) a data change causes the virtual DOM to be re-rendered and patched.
+beforeDestroy:
+Called (right before a Vue instance is destroyed). At this stage, the instance is still fully functional.
+destroyed:
+Called after a Vue instance has been destroyed.
+
+beforeCreate() {
+    console.log("Instance is about to be created. Data and events are not set up yet.");
+    this.message = "Hello, Vue!";
+}
+
+
+Composition API (lifecycle functions):
+onBeforeMount: Called right before the mounting begins.
+onMounted: Called after the instance has been mounted.
+onBeforeUpdate: Called when data changes, before the virtual DOM is re-rendered.
+onUpdated: Called after a data change causes the virtual DOM to be re-rendered.
+onBeforeUnmount: Called right before a Vue instance is unmounted.
+onUnmounted: Called after a Vue instance has been unmounted.
+
+onBeforeMount(() => {
+  console.log("Before mounting. Render function is about to be called for the first time.");
+  setupConfig();
+});

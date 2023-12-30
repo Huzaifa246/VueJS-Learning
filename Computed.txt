@@ -1,0 +1,16 @@
+5. Computed Properties:
+
+<template>
+  <div>
+    <p>{{ fullName }}</p>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue';
+
+const firstName = ref('John');
+const lastName = ref('Doe');
+
+const fullName = computed(() => `${firstName.value} ${lastName.value}`);
+</script>

@@ -1,0 +1,54 @@
+7. Routing (Vue Router):
+Vue Router - router-link and router-view:
+
+<!-- App.vue -->
+<template>
+  <div>
+    <router-link to="/home">Home</router-link>
+    <router-link to="/about">About</router-link>
+
+    <router-view></router-view>
+  </div>
+</template>
+
+<!-- Home.vue -->
+<template>
+  <div>
+    <h1>Home Page</h1>
+  </div>
+</template>
+
+<!-- About.vue -->
+<template>
+  <div>
+    <h1>About Page</h1>
+  </div>
+</template>
+
+
+8. Vuex (State Management):
+Vuex - mapState, mapGetters, mapActions, mapMutations:
+
+<template>
+  <div>
+    <p>{{ username }}</p>
+    <p>{{ doubledValue }}</p>
+    <button @click="increaseValue">Increase Value</button>
+  </div>
+</template>
+
+<script setup>
+import { useStore } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+const store = useStore();
+
+// mapState
+const { username } = mapState('auth', ['username']);
+
+// mapGetters
+const { doubledValue } = mapGetters('counter', ['doubledValue']);
+
+// mapActions
+const { increaseValue } = mapActions('counter', ['increaseValue']);
+</script>
